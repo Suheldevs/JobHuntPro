@@ -1,42 +1,115 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+body {
+  box-sizing: border-box;
+    font-family: 'Jost';
+    src: url(https://fonts.gstatic.com/s/jost/v18/92zUtBhPNqw73oHt5D4hTxM.woff2) format('woff2');
+    unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
   }
-  to {
-    transform: rotate(360deg);
+:root{
+  --p-c:#1967d2;
+  --p-c-h:#0146a6;
+  --white:white;
+  --black:black;
+}
+.p-c{
+  color:var(--p-c) !important;
+}
+.bg-p-c{
+ background-color:var(--p-c) !important;
+}
+.p-c-h{
+  color: var(--p-c-h) !important;
+}
+.white{
+  color: var(--white) !important;
+}
+.black{
+  color: var(--black) !important;
+}
+/* Hero section start*/
+.search{
+ 
+  height: 80px;
+  width: 100%;
+  border: 0.5px solid rgb(202, 201, 201);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  padding: 10px;
+}
+.search input{
+  height: 100%;
+  border: none;
+  outline: none;
+} 
+.my-btn{
+  background-color: var(--p-c) !important;
+  color: var(--white)  !important;
+}
+.my-btn:hover{
+  background-color: var(--p-c-h) !important;
+}
+.search:hover{
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+}
+.search-sugg span{
+background-color: #e5ebf5;
+color: var(--p-c);
+margin-left:8px ;
+padding: 2px;
+}
+.hero-right{
+  position: relative;
+}
+.hero-right .main-img{
+  z-index: 2;
+}
+.hero-right .cv{
+  border-right: 8px solid var(--p-c);
+  background-color: white;
+  z-index: 3;
+  padding: 10px;
+  position: absolute;
+  height: 80px;
+  width: 250px;
+  top: 0%;
+  right: 0%;
+  animation: cv-ani 4s infinite alternate;
+}
+@keyframes cv-ani{
+  100%{
+      top: 10%;
   }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.hero-right .img2{
+  position: absolute;
+  height: 25%;
+  right: 100px;
+  bottom: 10px;
+  z-index: 0;
+  animation: ani 4s infinite  alternate;
+}
+@keyframes ani{
+  100%{
+     right: 150px;
   }
 }
+/* Hero section end*/
 
-.card {
-  padding: 2em;
-}
 
-.read-the-docs {
-  color: #888;
+/* Job section start */
+.mybtn2{
+  border: 2px solid var(--p-c) !important;
+  background-color: transparent !important;
+  color: var(--p-c) !important;
+  display: inline;
 }
+.mybtn2:hover{
+  background-color: var(--p-c-h) !important;
+  color: var(--white) !important;
+}
+.heart{
+  background-color: var(--p-c) !important;
+  padding: 8px;
+  border-radius: 50%;
+  color: var(--white) !important;
+}
+/* Job section end */
