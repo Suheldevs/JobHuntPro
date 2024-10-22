@@ -25,6 +25,15 @@ body {
 .black{
   color: var(--black) !important;
 }
+/* navbaar start */
+.navbaar{
+  position: sticky !important;
+  z-index: 100;
+  top: 0px;
+}
+/* navbaar End */
+
+
 /* Hero section start*/
 .search{
  
@@ -43,9 +52,13 @@ body {
 .my-btn{
   background-color: var(--p-c) !important;
   color: var(--white)  !important;
+  border: 2px solid var(--p-c) !important;
 }
 .my-btn:hover{
-  background-color: var(--p-c-h) !important;
+  /* background-color: var(--p-c-h) !important; */
+  background-color: transparent !important;
+  color: var(--p-c-h) !important;
+  border: 2px solid var(--p-c-h) !important;
 }
 .search:hover{
   box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
@@ -111,5 +124,10 @@ padding: 2px;
   padding: 8px;
   border-radius: 50%;
   color: var(--white) !important;
+}
+
+.backgound{
+  background: url(../public/Images/bg-image-1.jpg);
+  background-size: cover;
 }
 /* Job section end */

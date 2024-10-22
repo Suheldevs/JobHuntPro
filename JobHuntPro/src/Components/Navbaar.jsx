@@ -5,7 +5,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Navbaar() {
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary navbaar">
       <Container>
         <Navbar.Brand href="#home">JobHuntPro</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

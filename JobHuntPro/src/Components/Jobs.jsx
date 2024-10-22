@@ -1,8 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Card, Badge ,Button} from 'react-bootstrap';
-import { FaMapMarkerAlt, FaClock, FaDollarSign, FaHeart} from 'react-icons/fa';
+import { FaHeart} from 'react-icons/fa';
 import jobData from './Data/JobData';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 const Jobs = () => {
   const [show, setShow]=useState('4');
   const [count, setCount]=useState(true);
@@ -16,8 +17,13 @@ const viewMore = ()=>{
     setCount(true);
   }
 }
+
+const navigate = useNavigate();
+const viewJob = (job)=>{
+navigate(`/job-details`, {state:{job}})
+}
   return (
-    <Container className="my-4">
+    <Container className="my-4 ">
       <Row className="g-4 ">
         <div className='text-center'>
           <div className='sm:mt-10 lg:mt-32'>
@@ -28,8 +34,8 @@ const viewMore = ()=>{
           </div>
         </div>
         {jobData.slice(0,show).map((job) => (
-          <Col key={job.id} xs={12} sm={12} lg={3} md={6}>
-            <Card className="shadow-md" style={{ width: '16rem', borderRadius: '10px', border: 'none' }}>
+          <Col key={job.id} xs={12} sm={12} lg={3} md={6}  className='d-flex justify-center'>
+            <Card className="shadow-md " style={{ width: '16rem', borderRadius: '10px', border: 'none' }}>
       <Card.Body className="text-center">
         {/* Full Time Badge */}
         <Badge bg={getBadgeType(job.job_type[0])} className="position-absolute bg-p-c" style={{ top: '10px', left: '10px' }}>
@@ -41,7 +47,7 @@ const viewMore = ()=>{
         </div>
 
         {/* Company/Job Image */}
-        <div className="my-4">
+        <div className="my-4 d-flex justify-center transition-all hover:scale-110 cursor-pointer">
           <img
             src={job.image_src} // replace with your logo image
             alt={job.job_title}
@@ -55,7 +61,7 @@ const viewMore = ()=>{
         <Card.Text className="text-muted">
           {job.location}
         </Card.Text>
-        <Button className="mt-3 mybtn2">
+        <Button className="mt-3 mybtn2" onClick={()=>{viewJob(job)}}>
           APPLY NOW
         </Button>
       </Card.Body>
@@ -63,7 +69,7 @@ const viewMore = ()=>{
           </Col>
         ))}
       </Row>
-     <div className='d-flex justify-center'>
+     <div className='d-flex justify-center mt-5'>
         <div className='btn mybtn2 h6' onClick={viewMore} id='more' >{count ? "Show More":"Hide"}</div>
         </div>
     </Container>
