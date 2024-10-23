@@ -6,6 +6,8 @@ import Category from './Components/Category';
 import JobDetail from './Components/JobDetail';
 import Footer from './Components/Footer';
 import FindJobs from './Components/FindJobs';
+import Signup from './Components/Signup';
+import Login from './Components/Login';
 function App() {
 
   return (  
@@ -14,9 +16,11 @@ function App() {
       <Routes>
         {/* <Route path='/nav' element={<Navbaar/>}/> */}
         <Route path='/' element={<Home/>}/>
-        <Route path='/category' element={<Category/>}/>
+        <Route path='/jobcategory' element={<Category/>}/>
         <Route path='/job-details' element={<JobDetail/>}/>
         <Route path='/findjobs' element={<FindJobs/>}/>
+        <Route path='/signup' element={<Signup/>}/>
+        <Route path='/login' element={<Login/>}/>
       </Routes>
       <Footer/>
     </Router>

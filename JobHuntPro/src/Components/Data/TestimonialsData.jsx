@@ -2,7 +2,7 @@ const testimonials = [
     {
       id: 1,
       title: "Awesome Design",
-      description: "Without JobHunt, I’d be homeless, they found me a job and got me sorted out quickly with everything! Can’t quite... The Mitech team works really a high level of quality.",
+      description: "Without JobHunt, I’d be homeless, they found me a job and got me sorted out quickly with everything! Can’t quite... The Mitech team works really a high level.",
       imageSrc: "path-to-ashley-image.jpg", 
       name: "Ashley Jenkins",
       profession: "Designer"
@@ -10,7 +10,7 @@ const testimonials = [
     {
       id: 2,
       title: "Good Theme",
-      description: "Without JobHunt, I’d be homeless, they found me a job and got me sorted out quickly with everything! Can’t quite... The Mitech team works really hard to ensure high level",
+      description: "Without JobHunt, I’d be homeless, they found me a job and got me sorted out quickly with everything! Can’t quite... The Mitech team works really hard to ensure.",
       imageSrc: "path-to-nicole-image.jpg", 
       name: "Nicole Wells",
       profession: "Web Developer"

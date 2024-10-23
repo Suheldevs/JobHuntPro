@@ -1,12 +1,11 @@
-import React from "react";
+import React,{Suspense,lazy} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaSearch } from "react-icons/fa";
 import { SlLocationPin } from "react-icons/sl";
-import Category from "./Category";
-import Jobs from "./Jobs";
+const Category= lazy(()=>import ("./Category"));
+const Jobs = lazy(()=>  import ("./Jobs"));
 import Company from "./Company";
-import Testimonials from "./Testimonials";
-import Footer from "./Footer";
+const Testimonials = lazy(()=> import ("./Testimonials"));
 export default function Home() {
 
     return (
@@ -17,7 +16,7 @@ export default function Home() {
                     <Col lg={6} sm={12} >
                         <Row>
                             <div className="">
-                                <div class="h1 fw-bold text-center lg:pt-16">There Are <span className="p-c">93,178</span> Postings Here For you!</div>
+                                <div class="h1 fw-bold text-center lg:pt-16" >There Are <span className="p-c">93,178</span> Postings Here For you!</div>
                                 <div className="ms-3 text-muted fw-bold fs-5">Find Jobs, Employment & Career Opportunities</div>
                                 <div className="d-flex justify-between search mt-4 gap-2">
                                     <div className="d-flex">
@@ -48,11 +47,20 @@ export default function Home() {
                     </Col>
                 </Row>
             </Container>
+            <Suspense fallback={<div className="text-center my-4 fs-2">Loading...</div>}>
+        
             <Jobs />
-            {/*<Company />
-                 <Category />
-                <Testimonials />
-                <Footer /> */}
+      </Suspense>
+            <Suspense fallback={<div className="text-center my-4 fs-2">Loading...</div>}>
+        
+            <Category />
+      </Suspense>
+            <Suspense fallback={<div className="text-center my-4 fs-2">Loading...</div>}>
+        
+            <Testimonials />
+      </Suspense>
+            <Company />
+            {/* <Testimonials /> */}
 
         </>
     )

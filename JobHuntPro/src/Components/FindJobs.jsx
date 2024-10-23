@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Card, Badge ,Button} from 'react-bootstrap';
+import { Container, Row, Col, Card, Badge ,Button, DropdownButton, Dropdown} from 'react-bootstrap';
 import { FaHeart} from 'react-icons/fa';
 import jobData from './Data/JobData';
 import { useState } from 'react';
@@ -9,14 +9,8 @@ const FindJobs = () => {
   const [count, setCount]=useState(true);
   const [searchInput, setSearchInput] = useState('');
 const viewMore = ()=>{
-  if(count){
-  setShow(jobData.length);
-  setCount(false);
-  }
-  else{
-    setShow('8');
-    setCount(true);
-  }
+  setShow(count ? jobData.length : 8);
+  setCount(!count);
 }
 
 const SearchData = (e)=>{
@@ -25,9 +19,10 @@ console.log(searchInput);
 
 }
 const filterjobData = jobData.filter((item)=>(
-item.job_title.toLowerCase().includes(searchInput.toLowerCase())
+(item.job_title.toLowerCase().includes(searchInput.toLowerCase())) || (item.company.toLowerCase().includes(searchInput.toLowerCase())) || (item.job_type[0].toLowerCase().includes(searchInput.toLowerCase()))
 ))
 
+console.log(filterjobData)
 const navigate = useNavigate();
 const viewJob = (job)=>{
 navigate(`/job-details`, {state:{job}})
@@ -42,14 +37,26 @@ navigate(`/job-details`, {state:{job}})
 </div>
 <Container className='my-5 searchbaar'>
   <Row>
+    <Col lg={3}></Col>
     <Col lg={4}>
     <div className='w-100 '>
       <input type='text' value={searchInput} onChange={SearchData}  placeholder='Job Title, Company Name, Keyword' className='fs-5'/>
     </div>
     </Col>
-    <Col lg={3}></Col>
-    <Col lg={3}></Col>
-    <Col lg={2}></Col>
+    {/* <Col lg={4} className="company">
+    <DropdownButton className='fs-5 dropdown mt-2' title={"Select a company"} >
+    <div className="custom-dropdown-menu">
+              {jobData.map((company, index) => (
+                <Dropdown.Item key={index} eventKey={company.company} className='fs-5' >
+                  {company.company}
+                </Dropdown.Item>
+              ))}
+              </div>
+            </DropdownButton>
+    </Col> */}
+    <Col lg={5} className="mt-3">
+    <div className='my-btn d-inline px-4 py-2 h6 rounded hover:cursor-pointer'>Search</div>
+    </Col>
   </Row>
 </Container>
         
@@ -81,7 +88,7 @@ navigate(`/job-details`, {state:{job}})
         <Card.Title className="fw-bold">{job.job_title}</Card.Title>
     
         <Card.Text className="text-muted">
-          {job.location}
+          {job.company}
         </Card.Text>
         <Button className="mt-3 mybtn2" onClick={()=>{viewJob(job)}}>
           APPLY NOW
@@ -91,8 +98,10 @@ navigate(`/job-details`, {state:{job}})
           </Col>
         ))}
       </Row>
+   
+
      <div className='d-flex justify-center mt-5'>
-        <div className='btn mybtn2 h6' onClick={viewMore} id='more' >{count ? "Show More":"Hide"}</div>
+        <div className='btn my-btn h6' onClick={viewMore} id='more' >{count ? "Show More":"Hide"}</div>
         </div>
     </Container>
     </>
@@ -111,7 +120,7 @@ const getBadgeType = (type) => {
       return "danger";
     case "Private":
       return "success";
-    case "Temporary":
+    case "Internship":
       return "secondary";
     default:
       return "light";

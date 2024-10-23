@@ -8,7 +8,7 @@ function Navbaar() {
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary navbaar">
       <Container>
-        <Navbar.Brand href="#home">JobHuntPro</Navbar.Brand>
+        <Navbar.Brand href="/" className='p-c-h jobhuntpro py-0 my-0 '>Job<span className='fs-4 text-danger hunt'>Hunt</span>Pro</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -16,8 +16,8 @@ function Navbaar() {
             <Nav.Link as={NavLink} to="/findjobs">Find Jobs</Nav.Link> 
             <Nav.Link as={NavLink} to="/jobcategory">Job Category</Nav.Link> 
             <NavDropdown title="Dashboard" id="collapsible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Sign In</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item as={NavLink} to="/signup">Sign In</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/login">
                 Log In
               </NavDropdown.Item>
               <NavDropdown.Divider />
@@ -28,7 +28,7 @@ function Navbaar() {
             <Nav.Link as={NavLink} to="/uploadcv" className='p-c fw-bold'>
               Upload your CV
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/loginregister" className='mybtn2 rounded py-0 pt-1 mx-4'>
+            <Nav.Link as={NavLink} to="/login" className='mybtn2 rounded py-0 pt-1 mx-4'>
               Login / Register
             </Nav.Link>
             <Nav.Link as={NavLink} to="/jobpost" eventKey={2} className='my-btn rounded'>

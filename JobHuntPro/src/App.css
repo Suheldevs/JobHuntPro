@@ -31,6 +31,24 @@ body {
   z-index: 100;
   top: 0px;
 }
+/* .nav:hover{
+  color: var(--p-c) !important;
+} */
+
+.jobhuntpro{
+  border-bottom:2px solid var(--p-c);
+  border-top:2px solid var(--p-c);
+  border-radius: 10%;
+}
+.jobhuntpro:hover{
+  border-bottom: 3px solid var(--p-c-h);
+  border-top:3px solid var(--p-c);
+  border-radius: 15%;
+}
+.hunt{
+  font-family:cursive ;
+}
+
 /* navbaar End */
 
 
@@ -135,11 +153,53 @@ padding: 2px;
 /* Find job section start */
 
 .searchbaar input{
-border: 2px solid var(--p-c);
-outline: none;
+border: 2px solid rgb(216, 214, 214);
+outline:none;
 width: 100%;
 height: 50px;
-border-radius: 10px;
+border-radius: 5px;
 padding: 10px;
 }
+.searchbaar input:focus{
+  border: 2px solid var(--p-c-h);
+}
+.company .dropdown{
+  position: relative;
+}
+.custom-dropdown-menu {
+  max-height: 200px;
+  overflow-y: auto;  
+}
 /* Find job section End */
+
+/* Category start */
+.category-icon{
+  background-color: #e7f1ff;
+  color: var(--p-c-h);
+}
+.category-card:hover .category-icon{
+  background-color: var(--p-c);
+  color: var(--white);
+}
+.category-card:hover{
+  
+  cursor: pointer;
+}
+/* Category End */
+
+
+
+
+
+
+
+/* footer section start */
+.footer-section li a{
+text-decoration: none;
+margin-top: 20px;
+}
+.footer-section li a:hover{
+  letter-spacing: 1px;
+  color: var(--p-c) !important;
+}
+/* footer section End */

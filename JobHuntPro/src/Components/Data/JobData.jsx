@@ -71,7 +71,7 @@ const jobData = [
         web:"www.google.com",
         email:'mohdsuhel.dev@gamil.com',
         exp:"2 year",
-        job_type: ["Temporary", "Private", "Urgent"],
+        job_type: ["Internship", "Private", "Urgent"],
         skill:["wordpress","Html","php","Tailwind"],
         job_Description: "As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.",
         experience:["You have at least 3 years experience working as a Product Designer.","You have experience using Sketch and InVision or Framer X","You have some previous experience working in an agile environment Think two-.","You are familiar using Jira and Confluence in your workflow"],

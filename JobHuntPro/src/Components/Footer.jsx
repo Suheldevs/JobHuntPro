@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer className="bg-light py-5">
       <Container>
-        <Row>
+        <Row className='footer-section'>
           {/* Left Column - Logo and Contact Info */}
           <Col xs={12} md={4} className="mb-4">
             <div className="footer-logo mb-3">
@@ -68,18 +68,18 @@ const Footer = () => {
         </Row>
 
         {/* Bottom Section */}
-        <Row className="pt-4 border-top">
-          <Col xs={12} md={6}>
+        <Row className="pt-2 border-top">
+          <Col xs={12} md={6} className='mt-3'>
             <p>© 2024 JobHuntPro. All Rights Reserved.</p>
           </Col>
-          <Col xs={12} md={6} className="text-md-end d-flex">
-            <a href="#facebook" className="text-dark me-3">
+          <Col xs={12} md={6} className="text-md-end d-flex justify-center gap-2">
+            <a href="#facebook" className=" p-2 fs-3  my-btn rounded white  ">
              <FaFacebook/>
             </a>
-            <a href="#twitter" className="text-dark me-3">
+            <a href="#twitter" className="  p-2  fs-3 my-btn rounded white  ">
              <FaTwitter/>
             </a>
-            <a href="#instagram" className="text-dark">
+            <a href="#instagram" className="  p-2  fs-3 my-btn rounded white ">
              <FaGithub/>
             </a>
           </Col>
