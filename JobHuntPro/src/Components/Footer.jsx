@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { FaFacebook, FaGithub, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -9,13 +10,13 @@ const Footer = () => {
           {/* Left Column - Logo and Contact Info */}
           <Col xs={12} md={4} className="mb-4">
             <div className="footer-logo mb-3">
-              <img src="path_to_logo" alt="Superio" style={{ width: '50px' }} />
-              <h5 className="mt-2">Superio</h5>
+              <img src="Images/banner-img-3.webp" alt="JobHuntPro" style={{ width: '100px' }} />
+              <h5 className="mt-2">JobHuntPro</h5>
             </div>
             <p><strong>Call us</strong></p>
-            <p><a href="tel:1234567890" className="text-primary">123 456 7890</a></p>
-            <p>329 Queensberry Street, North Melbourne VIC 3051, Australia</p>
-            <p>Email: <a href="mailto:support@superio.com" className="text-dark">support@superio.com</a></p>
+            <p><a href="tel:9519838720" className="text-primary">+91 9519838720</a></p>
+            <p>Aliganj Lucknow, India</p>
+            <p>Email: <a href="mailto:mohdsuhel.dev@gmail.com" className="text-dark">mohdsuhel.dev@gmail.com</a></p>
           </Col>
 
           {/* For Candidates */}
@@ -69,17 +70,17 @@ const Footer = () => {
         {/* Bottom Section */}
         <Row className="pt-4 border-top">
           <Col xs={12} md={6}>
-            <p>© 2023 Superio by ib-themes. All Rights Reserved.</p>
+            <p>© 2024 JobHuntPro. All Rights Reserved.</p>
           </Col>
-          <Col xs={12} md={6} className="text-md-end">
+          <Col xs={12} md={6} className="text-md-end d-flex">
             <a href="#facebook" className="text-dark me-3">
-              <i className="fab fa-facebook-f"></i>
+             <FaFacebook/>
             </a>
             <a href="#twitter" className="text-dark me-3">
-              <i className="fab fa-twitter"></i>
+             <FaTwitter/>
             </a>
             <a href="#instagram" className="text-dark">
-              <i className="fab fa-instagram"></i>
+             <FaGithub/>
             </a>
           </Col>
         </Row>

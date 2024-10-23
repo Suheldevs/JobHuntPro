@@ -2,38 +2,60 @@ import React from 'react';
 import { Container, Row, Col, Card, Badge ,Button} from 'react-bootstrap';
 import { FaHeart} from 'react-icons/fa';
 import jobData from './Data/JobData';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-const Jobs = () => {
-//   const [show, setShow]=useState('4');
-//   const [count, setCount]=useState(true);
-// const viewMore = ()=>{
-//   if(count){
-//   setShow(jobData.length);
-//   setCount(false);
-//   }
-//   else{
-//     setShow('4');
-//     setCount(true);
-//   }
-// }
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+const FindJobs = () => {
+  const [show, setShow]=useState('8');
+  const [count, setCount]=useState(true);
+  const [searchInput, setSearchInput] = useState('');
+const viewMore = ()=>{
+  if(count){
+  setShow(jobData.length);
+  setCount(false);
+  }
+  else{
+    setShow('8');
+    setCount(true);
+  }
+}
+
+const SearchData = (e)=>{
+setSearchInput(e.target.value);
+console.log(searchInput);
+
+}
+const filterjobData = jobData.filter((item)=>(
+item.job_title.toLowerCase().includes(searchInput.toLowerCase())
+))
 
 const navigate = useNavigate();
 const viewJob = (job)=>{
 navigate(`/job-details`, {state:{job}})
 }
   return (
-    <Container className="my-4 ">
-      <Row className="g-4 ">
-        <div className='text-center'>
-          <div className='sm:mt-10 lg:mt-32'>
-        <span className='h2'>  Featured Jobs</span>
-          </div>
-          <div className='h6 text-muted mt-1 mb-5'>
-          Know your worth and find the job that qualify your life
-          </div>
-        </div>
-        {jobData.slice(0,4).map((job) => (
+    <>
+    <div className='backgound p-5'>
+    <div className='text-center text-light'>
+        <div className='h2 mb-2'>Find Jobs</div>
+        <div className='h6 d-flex text-center justify-center gap-2'><Link to='/' className='text-light'>Home</Link> -- Find Job </div>
+    </div>
+</div>
+<Container className='my-5 searchbaar'>
+  <Row>
+    <Col lg={4}>
+    <div className='w-100 '>
+      <input type='text' value={searchInput} onChange={SearchData}  placeholder='Job Title, Company Name, Keyword' className='fs-5'/>
+    </div>
+    </Col>
+    <Col lg={3}></Col>
+    <Col lg={3}></Col>
+    <Col lg={2}></Col>
+  </Row>
+</Container>
+        
+        <Container className="my-4 ">
+    <Row className="g-4 ">
+        {filterjobData.slice(0,show).map((job) => (
           <Col key={job.id} xs={12} sm={12} lg={3} md={6}  className='d-flex justify-center'>
             <Card className="shadow-md " style={{ width: '16rem', borderRadius: '10px', border: 'none' }}>
       <Card.Body className="text-center">
@@ -70,9 +92,10 @@ navigate(`/job-details`, {state:{job}})
         ))}
       </Row>
      <div className='d-flex justify-center mt-5'>
-     <Link to="/findjobs"  className='btn my-btn h6'>More Jobs</Link> 
+        <div className='btn mybtn2 h6' onClick={viewMore} id='more' >{count ? "Show More":"Hide"}</div>
         </div>
     </Container>
+    </>
   );
 };
 
@@ -151,4 +174,4 @@ const getBadgeType = (type) => {
 
 
 
-export default Jobs;
+export default FindJobs;

@@ -153,6 +153,44 @@ const jobData = [
         experience:["You have at least 3 years experience working as a Product Designer.","You have experience using Sketch and InVision or Framer X","You have some previous experience working in an agile environment Think two-.","You are familiar using Jira and Confluence in your workflow"],
 
     },
+    {
+        id: 9,
+        job_title: "Senior Full Stack Engineer, Creator Success",
+        company:`${companyData[4].name}`,
+        category:`${categories[4].name}` ,
+        post_time: "11 hours ago",
+        image_src: "../Images/company_logo_5.png",
+        location: "London, UK",
+        salary: "$35k - $45k",
+        phone:"+91 9519838720",
+        web:"www.google.com",
+        email:'mohdsuhel.dev@gamil.com',
+        exp:"2 year",
+        job_type: ["Full Time", "Private", "Urgent"],
+        skill:["wordpress","Html","php","Tailwind"],
+        job_Description: "As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.",
+        experience:["You have at least 3 years experience working as a Product Designer.","You have experience using Sketch and InVision or Framer X","You have some previous experience working in an agile environment Think two-.","You are familiar using Jira and Confluence in your workflow"],
+
+    },
+    {
+        id: 10,
+        job_title: "Product Manager, Studio",
+        company:`${companyData[2].name}`,
+        category:`${categories[2].name}` ,
+        post_time: "11 hours ago",
+        image_src: "../Images/company_logo_3.png",
+        location: "London, UK",
+        phone:"+91 9519838720",
+        web:"www.google.com",
+        email:'mohdsuhel.dev@gamil.com',
+        exp:"2 year",
+        salary: "$35k - $45k",
+        job_type: ["Part Time", "Private", "Urgent"],
+        skill:["wordpress","Html","php","Tailwind"],
+        job_Description: "As a Product Designer, you will work within a Product Delivery Team fused with UX, engineering, product and data talent. You will help the team design beautiful interfaces that solve business challenges for our clients. We work with a number of Tier 1 banks on building web-based applications for AML, KYC and Sanctions List management workflows. This role is ideal if you are looking to segue your career into the FinTech or Big Data arenas.",
+        experience:["You have at least 3 years experience working as a Product Designer.","You have experience using Sketch and InVision or Framer X","You have some previous experience working in an agile environment Think two-.","You are familiar using Jira and Confluence in your workflow"],
+
+    },
 ];
 
 export default jobData;

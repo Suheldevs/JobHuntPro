@@ -4,6 +4,8 @@ import Navbaar from './Components/Navbaar'
 import Home from './Components/Home'
 import Category from './Components/Category';
 import JobDetail from './Components/JobDetail';
+import Footer from './Components/Footer';
+import FindJobs from './Components/FindJobs';
 function App() {
 
   return (  
@@ -14,7 +16,9 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/category' element={<Category/>}/>
         <Route path='/job-details' element={<JobDetail/>}/>
+        <Route path='/findjobs' element={<FindJobs/>}/>
       </Routes>
+      <Footer/>
     </Router>
   )
 }
