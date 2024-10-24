@@ -7,6 +7,7 @@ body {
 :root{
   --p-c:#1967d2;
   --p-c-h:#0146a6;
+  --bg-light:#e2e4e5;
   --white:white;
   --black:black;
 }
@@ -24,6 +25,9 @@ body {
 }
 .black{
   color: var(--black) !important;
+}
+.bg-light{
+  background-color: var(--bg-light);
 }
 /* navbaar start */
 .navbaar{
@@ -123,6 +127,13 @@ padding: 2px;
      right: 150px;
   }
 }
+.hero-link{
+  text-decoration: none;
+  color: white;
+}
+.hero-link:hover{
+  color: var(--p-c-h);
+}
 /* Hero section end*/
 
 
@@ -187,7 +198,13 @@ padding: 10px;
 }
 /* Category End */
 
+/* Dashboard start */
 
+.form-input{
+  outline: none;
+  border: 1px solid var(--p-c);
+}
+/* Dashboard End */
 
 
 

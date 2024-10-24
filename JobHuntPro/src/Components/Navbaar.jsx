@@ -21,11 +21,11 @@ function Navbaar() {
                 Log In
               </NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.3">Account</NavDropdown.Item>
+              <NavDropdown.Item as={NavLink} to="/dashboard" >Account</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link as={NavLink} to="/uploadcv" className='p-c fw-bold'>
+            <Nav.Link as={NavLink} to="/dashboard" className='p-c fw-bold'>
               Upload your CV
             </Nav.Link>
             <Nav.Link as={NavLink} to="/login" className='mybtn2 rounded py-0 pt-1 mx-4'>

@@ -2,7 +2,7 @@ const companyData = [
     {
       id: 1,
       name: "Udemy",
-      logo: "https://path-to-udemy-logo.png",
+      logo: "Images/udemy.jpg",
       category: "Accounting / Finance",
       location: "London, UK",
       job_opening: 15,
@@ -13,7 +13,7 @@ const companyData = [
     {
       id: 2,
       name: "Stripe",
-      logo: "https://path-to-stripe-logo.png",
+      logo: "Images/Stripe.jpg",
       category: "Accounting / Finance",
       location: "London, UK",
       job_opening: 22,
@@ -24,7 +24,7 @@ const companyData = [
     {
       id: 3,
       name: "Dropbox",
-      logo: "https://path-to-dropbox-logo.png",
+      logo: "Images/Dropbox.jpg",
       category: "Accounting / Finance",
       location: "London, UK",
       job_opening: 22,
@@ -35,7 +35,7 @@ const companyData = [
     {
       id: 4,
       name: "Google",
-      logo: "https://path-to-google-logo.png",
+      logo: "Images/google.jpg",
       category: "Technology",
       location: "London, UK",
       job_opening: 50,
@@ -46,7 +46,7 @@ const companyData = [
     {
       id: 5,
       name: "Facebook",
-      logo: "https://path-to-facebook-logo.png",
+      logo: "Images/facebook.jpg",
       category: "Social Media",
       location: "London, UK",
       job_opening: 35,
@@ -57,7 +57,7 @@ const companyData = [
     {
       id: 6,
       name: "Amazon",
-      logo: "https://path-to-amazon-logo.png",
+      logo: "Images/amazon.jpg",
       category: "E-commerce",
       location: "London, UK",
       job_opening: 40,
@@ -68,7 +68,7 @@ const companyData = [
     {
       id: 7,
       name: "Netflix",
-      logo: "https://path-to-netflix-logo.png",
+      logo: "Images/netflix.jpg",
       category: "Entertainment",
       location: "London, UK",
       job_opening: 20,
@@ -79,7 +79,7 @@ const companyData = [
     {
       id: 8,
       name: "Microsoft",
-      logo: "https://path-to-microsoft-logo.png",
+      logo: "Images/microsoft.jpg",
       category: "Software",
       location: "London, UK",
       job_opening: 30,
@@ -90,7 +90,7 @@ const companyData = [
     {
       id: 9,
       name: "Apple",
-      logo: "https://path-to-apple-logo.png",
+      logo: "Images/apple.jpg",
       category: "Technology",
       location: "London, UK",
       job_opening: 28,
@@ -101,7 +101,7 @@ const companyData = [
     {
       id: 10,
       name: "Tesla",
-      logo: "https://path-to-tesla-logo.png",
+      logo: "Images/tesla.jpg",
       category: "Automotive",
       location: "London, UK",
       job_opening: 18,

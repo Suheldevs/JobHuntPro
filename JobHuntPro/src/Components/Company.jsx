@@ -6,24 +6,18 @@ function Company() {
   const [show, setShow]=useState('4');
   const [count, setCount]=useState(true);
 const viewMore = ()=>{
-  if(count){
-  setShow(companyData.length);
-  setCount(false);
-  }
-  else{
-    setShow('4');
-    setCount(true);
-  }
+ setShow(count? companyData.length : 4)
+ setCount(!count)
 }
   return (
-    <div>
+    <div className="bg-light mb-5">
         <Container>
             <Row >
 {companyData.slice(0,show).map((cData)=>(
     <Col key={cData.id} xs={12} sm={6} lg={6}>
      <Card className="my-3 shadow-sm" style={{ borderRadius: '10px' }}>
      <Card.Body className="d-flex justify-content-between align-items-center">
-       <div className="d-flex align-items-center">
+       <div className="d-flex">
          {/* Company Logo */}
          <img
            src={cData.logo}
@@ -32,9 +26,9 @@ const viewMore = ()=>{
          />
          {/* Company Details */}
          <div>
-           <Card.Title className="mb-0">{cData.name}</Card.Title>
+           <Card.Title className="mb-0 mt-2">{cData.name}</Card.Title>
            <Row>
-            <Col xs={8} className='d-flex'>
+            <Col xs={7} className='d-flex'>
            <Card.Text className="text-muted mb-0" style={{ fontSize: '0.9rem' }}>
              {cData.location}
            </Card.Text>
@@ -42,10 +36,10 @@ const viewMore = ()=>{
              {cData.category}
            </Card.Text>
            </Col>
-           <Col xs={4}>
-           <Card.Text className="text-muted text-end btn rounded rounded-pill" style={{ fontSize: '0.9rem' }}>
+           <Col xs={5}>
+           <Card className="text-muted text-end p-1 rounded" style={{ fontSize: '0.9rem' }}>
             Open Jobs -  {cData.job_opening}
-           </Card.Text>
+           </Card>
            </Col>
            </Row>
 
@@ -60,7 +54,9 @@ const viewMore = ()=>{
 ))}
             </Row>
             <Row>
-        <div className='btn' onClick={viewMore} id='more' >{count ? "Show":"Hide"}</div>
+            <div className='my-2 text-center pb-4'>
+        <div className='my-btn px-3 rounded py-2 d-inline mb-5 hover:cursor-pointer' onClick={viewMore} id='more' >{count ? "Show":"Hide"}</div>
+        </div>
       </Row>
         </Container>
     </div>

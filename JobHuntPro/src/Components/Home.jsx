@@ -2,9 +2,11 @@ import React,{Suspense,lazy} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { FaSearch } from "react-icons/fa";
 import { SlLocationPin } from "react-icons/sl";
+import { Link } from "react-router-dom";
 const Category= lazy(()=>import ("./Category"));
 const Jobs = lazy(()=>  import ("./Jobs"));
 import Company from "./Company";
+import Dashboard from "./Dashboard";
 const Testimonials = lazy(()=> import ("./Testimonials"));
 export default function Home() {
 
@@ -26,7 +28,7 @@ export default function Home() {
                                         <span className="mt-4 me-2 h5 p-c"><SlLocationPin /></span><input type='text' placeholder="City or Pincode" />
                                     </div>
                                     <div className="d-flex">
-                                        <div className="btn bg-p-c rounded white my-btn">Find Jobs</div>
+                                        <div className="btn bg-p-c rounded white my-btn"><Link to="/findjobs"className="hero-link"> Find Jobs</Link></div>
                                     </div>
                                 </div>
                                 <div className="search-sugg mt-4"><h5 className="d-inline">Popular Searches : </h5><span className='btn'>Designer</span> <span className='btn'>Developer</span> <span className='btn'>IOS Devloper</span> <span className='btn'>Senior Engineer</span></div>
