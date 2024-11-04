@@ -21,6 +21,8 @@ Bootstrap: Additional styling and layout flexibility.
 JavaScript: To control application logic and interactivity.
 MongoDB: To store sign-in data (user sign-in functionality).
 
+<h2>Project Structure</h2>
+<pre>
 JobHuntPro
 ├── public
 │   ├── index.html
@@ -34,3 +36,6 @@ JobHuntPro
 ├── tailwind.config.js (Tailwind configuration)
 ├── package.json
 └── README.md
+</pre>
+
+
