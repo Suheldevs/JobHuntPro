@@ -20,3 +20,17 @@ Tailwind CSS: For styling the application with a responsive design.
 Bootstrap: Additional styling and layout flexibility.
 JavaScript: To control application logic and interactivity.
 MongoDB: To store sign-in data (user sign-in functionality).
+
+JobHuntPro
+├── public
+│   ├── index.html
+│   └── assets (images and other static files)
+├── src
+│   ├── components (individual React components)
+│   ├── pages (home, search filter, dashboard, login, etc.)
+│   ├── App.js (main app component)
+│   ├── index.js (entry point)
+│   └── data (object data file for listings and company data)
+├── tailwind.config.js (Tailwind configuration)
+├── package.json
+└── README.md
