@@ -2,29 +2,53 @@ import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { Link } from 'react-router-dom';
+import { json, Link } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
 import { FaFacebookF, } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 function Signup() {
- const [formData, setFormData] = useState({
- name:'',
- email:'',
- pass:''
- })
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        password: ''
+    })
 
- const handleChange = (e)=>{
-setFormData({...formData,[e.target.name]:e.target.value})
-}
-console.log(formData);
- const hadleSubmit=(e)=>{
-    e.preventDefault();
-    let json = JSON.stringify(formData);
-    localStorage.setItem('myObj', json);
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value })
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await fetch('http://localhost:3000/jobhuntpro/user/signin', {
+                method: "post",
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+          alert("Login successfull");
+          setTimeout(()=>{
+            window.location.href="http://localhost:5173/login";
+          },2000)
+        }
+        catch(err){
+            console.log(err);
+        }
+      setFormData({
+            name: '',
+            email: '',
+            password: ''
+    })
+ }
+
+
+
+    // let json = JSON.stringify(formData);
+    // localStorage.setItem('myObj', json);
     // window.location.href="http://localhost:3000/log-in";
 
- }
     return (
         <>
             <Container fluid style={{ background: 'whitesmoke', height: '85vh', width: '100%' }} className='lg:pt-16'>
@@ -42,10 +66,10 @@ console.log(formData);
                                     <div className='icon border border-light rounded p-2 bg-light'><FaLinkedinIn /></div>
                                 </div>
                                 <p>or use your email for registeration</p>
-                                <form method='reset' onSubmit={hadleSubmit} >
-                                    <input required type="text" name='name' value={formData.name}  onChange={handleChange} placeholder='Name' className='p-2 m-2 border-0 rounded mt-0' style={{ width: '90%', backgroundColor: '#f1f1f3fa', outline: 'none', }}></input>
+                                <form method='reset' onSubmit={handleSubmit} >
+                                    <input required type="text" name='name' value={formData.name} onChange={handleChange} placeholder='Name' className='p-2 m-2 border-0 rounded mt-0' style={{ width: '90%', backgroundColor: '#f1f1f3fa', outline: 'none', }}></input>
                                     <input required type="email" name='email' value={formData.email} onChange={handleChange} placeholder='Email' className='p-2 m-2 border-0 rounded ' style={{ width: '90%', backgroundColor: '#f1f1f3fa', outline: 'none', }}></input>
-                                    <input required type="password" name='pass'value={formData.pass} onChange={handleChange}  placeholder='Password' className='p-2 m-2 border-0 rounded ' style={{ width: '90%', backgroundColor: '#f1f1f3fa', outline: 'none', }}></input>
+                                    <input required type="password" name='password' value={formData.password} onChange={handleChange} placeholder='Password' className='p-2 m-2 border-0 rounded ' style={{ width: '90%', backgroundColor: '#f1f1f3fa', outline: 'none', }}></input>
                                     <button className='btn text-light border-0 ps-5 pe-5 mt-2' type='submit' style={{ background: '#2323ebde' }}>SIGN IN</button>
                                 </form>
                             </Col>

@@ -20,18 +20,18 @@ export default function Home() {
                             <div className="">
                                 <div class="h1 fw-bold text-center lg:pt-16" >There Are <span className="p-c">93,178</span> Postings Here For you!</div>
                                 <div className="ms-3 text-muted fw-bold fs-5">Find Jobs, Employment & Career Opportunities</div>
-                                <div className="d-flex justify-between search mt-4 gap-2">
-                                    <div className="d-flex">
-                                        <span className="mt-4 me-2 h5 p-c"><FaSearch /></span><input type='text' placeholder="Job title, Keyword, Company " />
+                                <div className="search mt-4 gap-2">
+                                    <div className="search-item d-flex">
+                                        <span className="lg:mt-4 sm:mt-3 me-2 h5 p-c"><FaSearch /></span><input type='text' placeholder="Job title, Keyword, Company " />
                                     </div>
-                                    <div className="d-flex">
-                                        <span className="mt-4 me-2 h5 p-c"><SlLocationPin /></span><input type='text' placeholder="City or Pincode" />
+                                    <div className="search-item d-flex">
+                                        <span className="lg:mt-4 sm:mt-3 me-2 h5 p-c"><SlLocationPin /></span><input type='text' placeholder="City or Pincode" />
                                     </div>
-                                    <div className="d-flex">
+                                    <div className="search-item d-flex">
                                         <div className="btn bg-p-c rounded white my-btn"><Link to="/findjobs"className="hero-link"> Find Jobs</Link></div>
                                     </div>
                                 </div>
-                                <div className="search-sugg mt-4"><h5 className="d-inline">Popular Searches : </h5><span className='btn'>Designer</span> <span className='btn'>Developer</span> <span className='btn'>IOS Devloper</span> <span className='btn'>Senior Engineer</span></div>
+                                <div className="search-sugg mt-4 sm:mb-4"><h5 className="d-inline">Popular Searches : </h5><span className='btn'>Designer</span> <span className='btn'>Developer</span> <span className='btn'>IOS Devloper</span> <span className='btn'>Senior Engineer</span></div>
                             </div>
                         </Row>
                     </Col>

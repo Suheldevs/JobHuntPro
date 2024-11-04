@@ -28,7 +28,7 @@ function Navbaar() {
             <Nav.Link as={NavLink} to="/dashboard" className='p-c fw-bold'>
               Upload your CV
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/login" className='mybtn2 rounded py-0 pt-1 mx-4'>
+            <Nav.Link as={NavLink} to="/login" className='mybtn2 rounded py-0 pt-1 mx-4 lg:mb-0 sm:mb-3'>
               Login / Register
             </Nav.Link>
             <Nav.Link as={NavLink} to="/jobpost" eventKey={2} className='my-btn rounded'>

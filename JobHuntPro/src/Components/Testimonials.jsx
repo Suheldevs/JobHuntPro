@@ -20,7 +20,7 @@ function Testimonials() {
                 // install Swiper modules
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={30}
-                slidesPerView={2.2}
+                slidesPerView={1.2}
                 centeredSlides={true}
                 
                 loop={true}

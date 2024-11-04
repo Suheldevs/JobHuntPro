@@ -37,7 +37,7 @@ const viewMore = ()=>{
            </Card.Text>
            </Col>
            <Col xs={5}>
-           <Card className="text-muted text-end p-1 rounded" style={{ fontSize: '0.9rem' }}>
+           <Card className="text-muted text-end p-1 rounded sm:d-none" style={{ fontSize: '0.9rem' }}>
             Open Jobs -  {cData.job_opening}
            </Card>
            </Col>

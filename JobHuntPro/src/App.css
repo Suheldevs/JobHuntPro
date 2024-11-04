@@ -58,13 +58,32 @@ body {
 
 /* Hero section start*/
 .search{
- 
+ display: flex;
+ justify-content: space-between;
   height: 80px;
   width: 100%;
   border: 0.5px solid rgb(202, 201, 201);
   box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
   border-radius: 15px;
   padding: 10px;
+}
+@media screen and (min-width:36px) and (max-width:768px) {
+  .search{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    justify-content: center;
+   
+  }
+  .search-item{
+border: 0.5px solid rgb(202, 201, 201);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  padding: 5px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  }
 }
 .search input{
   height: 100%;

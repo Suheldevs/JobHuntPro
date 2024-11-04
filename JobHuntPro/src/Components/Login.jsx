@@ -11,31 +11,33 @@ import { FaLinkedinIn } from 'react-icons/fa';
 function Login() {
     const [data,setData]=useState({
         email:'',
-        pass:''
+        password:''
     });
     const handleChange = (e)=>{
         setData({...data,[e.target.name]:e.target.value});
         console.log(data);
     }
-    let jsonData=localStorage.getItem('myObj');
-    let myObj = JSON.parse(jsonData);
-        console.log(myObj);
+    // let jsonData=localStorage.getItem('myObj');
+    // let myObj = JSON.parse(jsonData);
+    //     console.log(myObj);
 
-    const submit = (e)=>{
+    const submit = async (e)=>{
         e.preventDefault();
-        console.log("hello")
-        if(data.email===myObj.email && data.pass === myObj.pass){
-            document.getElementById('form-group').innerHTML=`<h1>Log in Successful.. </h1>`
-            setTimeout(()=>{
-                window.location.href="http://localhost:3000/"
-            },1000)
-        }
-        else{
-            document.getElementById('form-group').innerHTML=`<h1 style='red'>Password is incorrect. !Please login again.  </h1>` ;
-            setTimeout(()=>{
-                window.location.href="http://localhost:3000/log-in"
-            },1500)
-        }
+        try{
+       const responce = await fetch('http://localhost:3000/jobhuntpro/user/login', {
+        method:'post',
+        headers:{
+            'Content-Type':'application/json',
+        },
+        body: JSON.stringify(data),
+       });
+       const myData = await responce.json();
+       console.log(myData);
+    }
+    catch(err){
+        console.log(err);
+    }  
+
         
     }
   return (
@@ -65,10 +67,12 @@ function Login() {
 
                                     {/* <input required type="text" class='hidden' name='name' placeholder='Name' className='p-2 m-2 border-0 rounded mt-0' style={{ width: '90%', backgroundColor: '#f1f1f3fa', outline: 'none', }}></input> */}
                                     <input required type="email" class='hidden' name='email' onChange={handleChange} value={data.email} placeholder='Email' className='p-2 m-2 border-0 rounded ' style={{ width: '90%', backgroundColor: '#f1f1f3fa', outline: 'none', }}></input>
-                                    <input required type="password" class='hidden' name='pass' onChange={handleChange} value={data.pass} placeholder='Password' className='p-2 m-2 border-0 rounded ' style={{ width: '90%', backgroundColor: '#f1f1f3fa', outline: 'none', }}></input>
+                                    <input required type="password" class='hidden' name='password' onChange={handleChange} value={data.password} placeholder='Password' className='p-2 m-2 border-0 rounded ' style={{ width: '90%', backgroundColor: '#f1f1f3fa', outline: 'none', }}></input>
                                 
                                 <button className='ps-2 pe-2 m-2'style={{border:'none', outline:'none'}}>Forgate Password</button><br/>
-                                <button className='btn text-light border-0 ps-5 pe-5 mt-2' type='submit' style={{ background: '#2323ebde' }}>LOG IN</button>
+                                <button className='btn text-light border-0 ps-5 pe-5 mt-2' type='submit' style={{ background: '#2323ebde' }}><Link to="/dashboard" className="text-light text-decoration-none">
+                                    LOG IN
+                                </Link></button>
                                 </form>
                             </Col>
                         </Row>
