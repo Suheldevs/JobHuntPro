@@ -14,9 +14,9 @@ const Footer = () => {
               <h5 className="mt-2">JobHuntPro</h5>
             </div>
             <p><strong>Call us</strong></p>
-            <p><a href="tel:9519838720" className="text-primary">+91 9519838720</a></p>
+            <p><a href="tel:9500000000" className="text-primary">+91 xxxxxxxxx</a></p>
             <p>Aliganj Lucknow, India</p>
-            <p>Email: <a href="mailto:mohdsuhel.dev@gmail.com" className="text-dark">mohdsuhel.dev@gmail.com</a></p>
+            <p>Email: <a href="mailto:mohdsuhel.dev@gmail.com" className="text-dark">mohdateek.dev@gmail.com</a></p>
           </Col>
 
           {/* For Candidates */}
