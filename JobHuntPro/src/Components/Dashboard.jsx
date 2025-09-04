@@ -27,11 +27,11 @@ const Dashboard = () => {
           <Row className="mb-4">
             <Col lg={6} sm={12} className="d-flex justify-start">
             <div className="border rounded-circle">
-              <img src="Images/profile-pic.png" alt="User" height={"80px"} width={"80px"}/>
+              <img src="" alt="User" height={"80px"} width={"80px"}/>
             </div>
             </Col>
             <Col lg={6} sm={12} className="text-end">
-            <h2> Mohd Suhel</h2>
+            <h2> Mohd Ateek</h2>
             <p>Ready to jump back in?</p>
             </Col>
            
