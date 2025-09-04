@@ -16,7 +16,7 @@ const Footer = () => {
             <p><strong>Call us</strong></p>
             <p><a href="tel:9500000000" className="text-primary">+91 xxxxxxxxx</a></p>
             <p>Aliganj Lucknow, India</p>
-            <p>Email: <a href="mailto:mohdsuhel.dev@gmail.com" className="text-dark">mohdateek.dev@gmail.com</a></p>
+            <p>Email: <a href="mailto:mohdateek.dev@gmail.com" className="text-dark">mohdateek.dev@gmail.com</a></p>
           </Col>
 
           {/* For Candidates */}
@@ -70,7 +70,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <Row className="pt-2 border-top">
           <Col xs={12} md={6} className='mt-3'>
-            <p>© 2024 JobHuntPro. All Rights Reserved.</p>
+            <p>© 2025 JobHuntPro. All Rights Reserved.</p>
           </Col>
           <Col xs={12} md={6} className="text-md-end d-flex justify-center gap-2">
             <a href="#facebook" className=" p-2 fs-3  my-btn rounded white  ">
